@@ -577,7 +577,7 @@ docker ps
 docker logs -f CONTAINER_ID
 ```
 ### Shut down and Start up
-```console
+```
 docker compose down
 ```
 ```
