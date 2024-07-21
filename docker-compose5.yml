@@ -9,12 +9,12 @@ services:
     ports:
       - "8000:8000"
     networks:
-      arb-model-local:
+      sol-model-local:
         aliases:
           - inference
         ipv4_address: 172.22.0.4
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/inference/ARB"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/inference/SOL"]
       interval: 10s
       timeout: 10s
       retries: 12
@@ -37,7 +37,7 @@ services:
       inference:
         condition: service_healthy
     networks:
-      arb-model-local:
+      sol-model-local:
         aliases:
           - updater
         ipv4_address: 172.22.0.5
@@ -67,7 +67,7 @@ services:
       - ./head-data:/data
     working_dir: /data
     networks:
-      arb-model-local:
+      sol-model-local:
         aliases:
           - head
         ipv4_address: 172.22.0.100
@@ -95,11 +95,11 @@ services:
           --runtime-path=/app/runtime --runtime-cli=bls-runtime --workspace=/data/workspace \
           --private-key=/data/keys/priv.bin --log-level=debug --port=9011 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/12D3KooWGEWg8n7sMUfLf3p3RZ1xkzY2eqN7DDVhnJPCbf8cngtD \
-          --topic=allora-topic-9-worker --allora-chain-worker-mode=worker \
+          --topic=allora-topic-5-worker --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='pledge easily chuckle claw orbit repeat lottery acoustic symptom boss aim sing exist angry magnet village debate intact secret prison mimic warrior service fly' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-key-name=worker-1 \
-          --allora-chain-topic-id=9
+          --allora-chain-topic-id=5
     volumes:
       - ./workers/worker-1:/data
     working_dir: /data
@@ -107,13 +107,13 @@ services:
       - inference
       - head
     networks:
-     arb-model-local:
+     sol-model-local:
         aliases:
           - worker1
         ipv4_address: 172.22.0.12
  
 networks:
-  arb-model-local:
+  sol-model-local:
     driver: bridge
     ipam:
       config:
