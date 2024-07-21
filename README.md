@@ -576,19 +576,10 @@ docker ps
 ```console
 docker logs -f CONTAINER_ID
 ```
-
-Congratz. Worker is working safely but currently I am not sure that I have done it completely correct as the point system seems to be buggy. I'll update here and on my twitter [0xMoei](https://twitter.com/0xMoei)
-
-
-### 🚨Error 408: when checking topic status
+### Shut down and Start up
 ```console
-# Ensure you are in the right directory
-cd $HOME && cd basic-coin-prediction-node
-
-# Remove worker container (worker-1 or worker-2)
-docker container stop worker-1
-docker container rm worker-1
-
-# Restart worker container (worker-1 or worker-2)
-docker compose up -d --build
+docker compose down
+```
+```
+docker compose up -d
 ```
