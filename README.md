@@ -569,11 +569,13 @@ Response:
 {"value":"2564.021586281073"}
 ```
 
-### Check Docker containers
+### Check Docker containers and Docker log
 ```console
 docker ps
 ```
-
+```console
+docker logs -f CONTAINER_ID
+```
 
 Congratz. Worker is working safely but currently I am not sure that I have done it completely correct as the point system seems to be buggy. I'll update here and on my twitter [0xMoei](https://twitter.com/0xMoei)
 
