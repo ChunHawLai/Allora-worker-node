@@ -1,31 +1,5 @@
 ![666b297b8d80555ff9a25256_allora-points-phase-2](https://github.com/0xmoei/allora-testnet/assets/90371338/6298f73a-3c58-40a6-9d92-725f36456901)
 
-<h1 align="center">Allora Network Point Program</h1>
-
-> - Create a new wallet in Keplr
->
-> - Connect to the on-chain Point Program [Dashboard](https://app.allora.network?ref=eyJyZWZlcnJlcl9pZCI6IjVlNmEwMjc5LTcxNjEtNDhmYS04NGM3LWEzYzM0MGM4MGIzNyJ9)
->
-> - In Campaigns tab you see 2 tasks, Check them
-> 
-> - In the tutorial we run 2 `Price Prediction Workers` with `topic 5` & `topic 6` (Predicting `SOL` price every 24hr & 1hr)
->
-> - Check the campaigns tasks steps to see what `topic` means
->
-> - We get points by running a worker
->
-> - The points are 0 for everyone right now and we are not sure that we are 100% fine
->
-> - I will update reguarly here, so we make sure that we will gain points when it is fixed
-
-#
-
-> Make sure to join off-chain community tasks on [Zealy](https://zealy.io/cw/alloranetwork/invite/IU2cqqMstYG1pEtHTenpn) & [Galxe](https://app.galxe.com/quest/AlloraNetwork) since they are as important as onchain tasks
->
-> Team will add new tasks in it this week
-
-#
-
 <h1 align="center">Price Prediction Worker Node</h1>
 
 ## System Requirements
